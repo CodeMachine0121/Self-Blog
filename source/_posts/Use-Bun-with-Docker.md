@@ -35,7 +35,7 @@ bun() {
 }
 ```
 這樣一來我們的使用畫面就會像這樣
-{% asset_img result.png 300 500%}
+{% asset_img result.png }
 
 ## Conclusion
 透過上面流程，我們就可以透過 docker 把開發環境與我們的本機端環境做切割。但這個方法不侷限於使用 bun，同理的 python, nodejs, npm 等等都可透過這個方法去做環境區分，那麽這邊就先這樣囉。
