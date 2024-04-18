@@ -22,10 +22,6 @@ Hi all, 這次的發想單純是因為假日到了找個工具來玩玩，但又
 
 `$ docker run -it --rm -p 8080:8080 -w /app -v $(pwd):/app oven/bun bun <custom-command>`
 
-透過上面的指令我們就可以來初始化 bun的專案，如圖
-{% asset_img init-project.png%}
-另外再透過 docker 檢查 container是否有被刪除
-{% asset_img check-delete.png %}
 
 到這邊我們已經可能正常的透過 docker 使用 bun了，但每次要使用 bun 都必須打這麼長一大串是蠻不友善的，於是我們可以在各自的 .bashrc/.zshrc 寫下這個 function
 
@@ -34,8 +30,7 @@ bun() {
   docker run -it - rm -w /app -v "$(pwd)":/app -p 8080:8080 oven/bun bun "$@"
 }
 ```
-這樣一來我們的使用畫面就會像這樣
-{% asset_img result.png }
+這樣一來我們就可以使用指令初始化專案:  `$ bun init`
 
 ## Conclusion
 透過上面流程，我們就可以透過 docker 把開發環境與我們的本機端環境做切割。但這個方法不侷限於使用 bun，同理的 python, nodejs, npm 等等都可透過這個方法去做環境區分，那麽這邊就先這樣囉。
