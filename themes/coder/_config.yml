@@ -19,7 +19,7 @@ style: black
 description: Hi all，我會在這邊放平時開發碰到的酷東西 或是 programing 心得，能夠從這邊拿到知識就拿吧！
 
 ## 网站关键词：用英文逗号分割
-keywords: JamesHsueh,Coding, Programing, Devops, 薛華慶
+keywords: James-Hsueh, 地域列車車長, Coding, Programing, Devops, 薛華慶
 
 # 首页URL | Your URL
 link: https://codemachine0121.github.io
@@ -28,10 +28,10 @@ link: https://codemachine0121.github.io
 words: 邊玩邊學，學會了再寫文章記錄
 
 # 你的昵称 | Your Name
-author: James Hsueh 地獄列車車長
+author: James-Hsueh 地獄列車車長
 
 # 中心图标选择男女或者自定义 | Gender
-gender: /img/male.png #/img/female.png
+gender: /img/me.png #/img/female.png
 
 # 站点小图标地址 | Small Icon of Your Site
 favicon: /img/favicon.ico
@@ -54,7 +54,7 @@ search:
 ## 做了域名限制，请改成自己的 KEY
 ## 若关闭valine 设置enable为false∂
 valine:
-  enable: true
+  enable: false
   appId:
   appKey:
 
