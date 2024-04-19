@@ -9,29 +9,32 @@
     </p>
 </div>
 
-<%- partial('_partial/nav') %>
-<div class="hd">
-    <% var last; %>
-    <% page.posts.each(function (post) { %>
-        <% var year = post.date.year(); %>
-        <% if (last != year){ %>
-            <div class="titlex">
-                <p><span class="jing"></span><span style="color: #6d9ee7;"> 西元</span>
-                 <%= year %>年 🕛
-                </p>
-            </div>
-            <% last = year; %>
-        <% } %>
-        <a class="flink" href="<%- url_for(post.path) %>">
-            <div class="list">
-                <div class="postname">
-                    <%= post.title %>
+<div class="main">
+
+    <%- partial('_partial/nav') %>
+    <div class="hd articles">
+        <% var last; %>
+        <% page.posts.each(function (post) { %>
+            <% var year = post.date.year(); %>
+            <% if (last != year){ %>
+                <div class="titlex">
+                    <p><span class="jing"></span><span style="color: #6d9ee7;"> 西元</span>
+                        <%= year %>年 🕛
+                    </p>
                 </div>
-                <div class="posttime">
-                    <%- full_date(post.date, 'MMMM Do') %>
+                <% last = year; %>
+            <% } %>
+            <a class="flink" href="<%- url_for(post.path) %>">
+                <div class="list">
+                    <div class="postname">
+                        <%= post.title %>
+                    </div>
+                    <div class="posttime">
+                        <%- full_date(post.date, 'MMMM Do') %>
+                    </div>
                 </div>
-            </div>
-        <br>
-        </a>
-    <% }) %>
+                <br>
+            </a>
+        <% }) %>
+    </div>
 </div>
